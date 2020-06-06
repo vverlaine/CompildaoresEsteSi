@@ -1472,12 +1472,19 @@ public class Methods {
             int v1 = Integer.valueOf(v);
             resultanteI = v1 + constante1 * (constante2 / constante3) + x1;
             System.out.print("Resultado de la formula: " + Integer.toString(resultanteI) + "\n\n");
+            Compilador.lbr1.setText("Resultado de la formula: " + Integer.toString(resultanteI));
+            Compilador.lbr2.setText("Resultado de la formula: " + Integer.toString(resultanteI));
+            Compilador.lbr3.setText("Resultado de la formula: " + Integer.toString(resultanteI));
 
         } else {
             if (tipo.equals("Real")) {
                 float v2 = Float.valueOf(v);
                 resultanteF = v2 + constante1 * (constante2 / constante3) + x1;
                 System.out.print("Resultado de la formula: " + Float.toString(resultanteF) + "\n\n");
+                Compilador.lbr1.setText("Resultado de la formula: " + Float.toString(resultanteF));
+                Compilador.lbr2.setText("Resultado de la formula: " + Float.toString(resultanteF));
+                Compilador.lbr3.setText("Resultado de la formula: " + Float.toString(resultanteF));
+
             } else {
 
                 System.out.print("Error: Tipo de variable no permitida \n\n");
@@ -1492,6 +1499,5 @@ public class Methods {
         }
 
     }
-
 
 }
