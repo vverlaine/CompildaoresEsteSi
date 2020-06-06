@@ -68,14 +68,14 @@ public class Methods {
                     System.out.println("Datos leidos : " + lineContent);
                     String[] lineElements = lineContent.split("\n");
                     contenido.add(lineElements);
-                    array1.add(lineContent);
+                    //array1.add(lineContent);
                 }
                 array1.add(lineContent);
                 lineNumber++;
             }
-            for (Object a : array1) {
+            array1.stream().filter((a) -> (a != null)).forEachOrdered((a) -> {
                 Compilador.txtArea.append(a + "\n");
-            }
+            });
         } catch (IOException e) {
             System.out.println(e);
         }
